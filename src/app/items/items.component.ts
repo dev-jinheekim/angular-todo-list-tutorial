@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Item } from '../item';
 
 @Component({
   selector: 'app-items',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ItemsComponent implements OnInit {
 
-  item = 'first item';
+  item: Item = {
+    id: 1,
+    text: 'my first todo is studying Angular'
+  };
+
   constructor() { }
 
   ngOnInit() {
